@@ -1,0 +1,27 @@
+
+
+<section class="control-flows">
+    @if(b > a) {
+        <h1>Welcome</h1>
+        <p>Length is: {{array.length}}</p>
+
+        @for(item of items; track item.id) {
+            {{item.name}}
+        }
+        <br>
+        <br>
+        <br>
+        @for(item of items; track item.id; let idx = $index, e = $even) {
+            Item #{{idx}}: {{item.name}} <br>
+        }
+
+        <br>
+
+        @for (item of items; track item.name) {
+            <li> {{ item.name }}</li>
+            } @empty {
+            <li> There are no items.</li>
+        }
+        
+    }
+</section>
